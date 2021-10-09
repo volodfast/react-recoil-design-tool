@@ -1,9 +1,15 @@
 import React, { FC } from 'react';
+import { RecoilRoot } from 'recoil';
 // components
-import { AppContainer } from './App.styled';
+import { AppContainer, GlobalStyles } from './App.styled';
 
 const App: FC = () => {
-  return <AppContainer></AppContainer>;
+  return (
+    <RecoilRoot>
+      <AppContainer></AppContainer>
+      <GlobalStyles />
+    </RecoilRoot>
+  );
 };
 
 export default App;
