@@ -17,3 +17,9 @@ export function useDebounce<TArgs extends unknown[]>(
     mouseDownTimeout.current = setTimeout(() => set(...args), duration);
   };
 }
+
+export function getRandomImageUrl() {
+  return {
+    src: 'https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif',
+  };
+}
