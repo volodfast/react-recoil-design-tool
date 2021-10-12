@@ -1,12 +1,14 @@
 import React, { FC } from 'react';
 import { RecoilRoot } from 'recoil';
 // components
-import { AppContainer, GlobalStyles } from './App.styled';
+import DesignToolPage from '../../../../pages/design-tool/design-tool';
+// styles
+import { GlobalStyles } from './App.styled';
 
 const App: FC = () => {
   return (
     <RecoilRoot>
-      <AppContainer></AppContainer>
+      <DesignToolPage />
       <GlobalStyles />
     </RecoilRoot>
   );

@@ -1,12 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { colors } from '../../constants';
-
-export const AppContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
-`;
 
 export const GlobalStyles = createGlobalStyle`
     body {
