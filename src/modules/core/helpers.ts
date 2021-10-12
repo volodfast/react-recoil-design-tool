@@ -23,3 +23,7 @@ export function getRandomImageUrl() {
     src: 'https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif',
   };
 }
+
+export const capitalizeFirst = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
