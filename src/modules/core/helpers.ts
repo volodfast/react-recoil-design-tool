@@ -27,3 +27,27 @@ export function getRandomImageUrl() {
 export const capitalizeFirst = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+
+type ImageDimensions = {
+  width: number;
+  height: number;
+};
+
+export const getImageDimensions = (src: string): Promise<ImageDimensions> => {
+  return new Promise<ImageDimensions>((res, rej) => {
+    const image = new Image();
+
+    image.onload = () => {
+      res({
+        width: image.width,
+        height: image.height,
+      });
+    };
+
+    image.onerror = (err) => {
+      rej(err);
+    };
+
+    image.src = src;
+  });
+};
