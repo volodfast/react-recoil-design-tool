@@ -8,8 +8,7 @@ import {
 // interfaces
 import { ImageProps } from './Image.interface';
 
-const Image: FC<ImageProps> = ({ id }) => {
-  const imageSrc = useRecoilValue(imageSrcState(id));
+const useSetDefaultDimensions = (id: number) => {
   const imageDimensions = useRecoilValue(imageDimensionsState(id));
 
   const width = imageDimensions?.width;
@@ -33,6 +32,12 @@ const Image: FC<ImageProps> = ({ id }) => {
       };
     });
   }, [width, height, setElement]);
+};
+
+const Image: FC<ImageProps> = ({ id }) => {
+  const imageSrc = useRecoilValue(imageSrcState(id));
+
+  useSetDefaultDimensions(id);
 
   if (!imageSrc) {
     return null;
