@@ -1,12 +1,38 @@
-import React, { FC } from 'react';
-import { useRecoilValue } from 'recoil';
-import { imageDimensionsState, imageSrcState } from '../../design-tool.state';
+import React, { FC, useEffect } from 'react';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import {
+  elementState,
+  imageDimensionsState,
+  imageSrcState,
+} from '../../design-tool.state';
 // interfaces
 import { ImageProps } from './Image.interface';
 
 const Image: FC<ImageProps> = ({ id }) => {
   const imageSrc = useRecoilValue(imageSrcState(id));
-  const dimensions = useRecoilValue(imageDimensionsState(id));
+  const imageDimensions = useRecoilValue(imageDimensionsState(id));
+
+  const width = imageDimensions?.width;
+  const height = imageDimensions?.height;
+
+  const setElement = useSetRecoilState(elementState(id));
+
+  useEffect(() => {
+    if (!width || !height) {
+      return;
+    }
+
+    setElement((element) => {
+      return {
+        ...element,
+        style: {
+          ...element.style,
+          width,
+          height,
+        },
+      };
+    });
+  }, [width, height, setElement]);
 
   if (!imageSrc) {
     return null;
