@@ -1,8 +1,8 @@
 import React, { Suspense, FC } from 'react';
 import { RecoilRoot } from 'recoil';
 // components
-import Loading from '../Loading';
-import DesignToolPage from '../../../../pages/design-tool/design-tool';
+import Loading from 'modules/core/components/Loading';
+import DesignToolPage from 'pages/design-tool/design-tool';
 // styles
 import { GlobalStyles } from './App.styled';
 

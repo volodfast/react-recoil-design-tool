@@ -1,4 +1,4 @@
-import { CommonStyle } from '../../design-tool.interfaces';
+import { CommonStyle } from 'modules/design-tool/design-tool.interfaces';
 
 export type StyleInputProps = {
   property: keyof CommonStyle;

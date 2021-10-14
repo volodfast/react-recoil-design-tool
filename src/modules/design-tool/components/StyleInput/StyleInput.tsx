@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { useRecoilState } from 'recoil';
 // components
-import NumberInput from '../../../core/components/NumberInput';
+import NumberInput from 'modules/core/components/NumberInput';
 // state
-import { selectedElementState } from '../../design-tool.state';
+import { selectedElementState } from 'modules/design-tool/design-tool.state';
 // helpers
-import { capitalizeFirst } from '../../../core/helpers';
+import { capitalizeFirst } from 'modules/core/helpers';
 // interfaces
 import { StyleInputProps } from './StyleInput.inteface';
 

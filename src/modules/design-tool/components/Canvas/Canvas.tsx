@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 // components
-import Element from '../Element';
+import Element from 'modules/design-tool/components/Element';
 // state
 import {
   elementListState,
   selectedElementIdState,
-} from '../../design-tool.state';
+} from 'modules/design-tool/design-tool.state';
 // styles
 import { CanvasContainer } from './Canvas.styled';
 

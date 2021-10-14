@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from '../../../core/constants';
+import { colors } from 'modules/core/constants';
 
 export const BaseElementContainer = styled.div<{
   isMouseDown: boolean;

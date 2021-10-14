@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 // components
-import Spinner from '../../../core/components/Spinner';
+import Spinner from 'modules/core/components/Spinner';
 // styles
 import { ElementFallbackContainer } from './ElementFallback.styled';
 

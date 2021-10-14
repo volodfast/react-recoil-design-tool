@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../core/constants';
+import { colors } from 'modules/core/constants';
 
 export const LeftSidebarContainer = styled.div`
   width: 300px;

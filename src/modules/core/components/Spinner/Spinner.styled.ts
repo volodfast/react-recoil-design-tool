@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { colors } from '../../constants';
+import { colors } from 'modules/core/constants';
 
 const rotator = keyframes`
   0% {

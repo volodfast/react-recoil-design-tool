@@ -1,15 +1,15 @@
 import randomMaterialColor from 'random-material-color';
 import { useRecoilCallback, useRecoilState } from 'recoil';
 // helpers
-import { getRandomImageUrl } from '../../../core/helpers';
+import { getRandomImageUrl } from 'modules/core/helpers';
 // state
 import {
   defaultStyle,
   elementListState,
   elementState,
-} from '../../design-tool.state';
+} from 'modules/design-tool/design-tool.state';
 // interfaces
-import { ElementState } from '../../design-tool.interfaces';
+import { ElementState } from 'modules/design-tool/design-tool.interfaces';
 
 export const useInsertElement = () => {
   const [elementList, setElementList] = useRecoilState(elementListState);

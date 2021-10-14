@@ -1,10 +1,11 @@
 import React, { FC, useEffect } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
+// state
 import {
   elementState,
   imageDimensionsState,
   imageSrcState,
-} from '../../design-tool.state';
+} from 'modules/design-tool/design-tool.state';
 // interfaces
 import { ImageProps } from './Image.interface';
 

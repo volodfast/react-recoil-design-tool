@@ -2,7 +2,10 @@ import React, { FC } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { Resizable as ReactResizable } from 'react-resizable';
 // state
-import { elementState, isSelectedState } from '../../design-tool.state';
+import {
+  elementState,
+  isSelectedState,
+} from 'modules/design-tool/design-tool.state';
 // interfaces
 import { ResizableProps } from './Resizable.inteface';
 // styles

@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { FiSquare, FiImage } from 'react-icons/fi';
 // components
-import ButtonGroup from '../../../core/components/ButtonGroup';
-import IconButton from '../../../core/components/IconButton';
+import ButtonGroup from 'modules/core/components/ButtonGroup';
+import IconButton from 'modules/core/components/IconButton';
 // helpers
 import { useInsertElement } from './LeftSidebar.helpers';
 // styles

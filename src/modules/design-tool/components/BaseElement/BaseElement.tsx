@@ -1,14 +1,14 @@
 import React, { FC, useState } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 // components
-import Resizable from '../Resizable';
-import Draggable from '../Draggable';
+import Resizable from 'modules/design-tool/components/Resizable';
+import Draggable from 'modules/design-tool/components/Draggable';
 // state
 import {
   elementState,
   isSelectedState,
   selectedElementIdState,
-} from '../../design-tool.state';
+} from 'modules/design-tool/design-tool.state';
 // interfaces
 import { BaseElementProps } from './BaseElement.interface';
 // styles

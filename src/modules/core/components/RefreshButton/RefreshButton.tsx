@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { FiRefreshCw } from 'react-icons/fi';
 // components
-import IconButton from '../IconButton';
+import IconButton from 'modules/core/components/IconButton';
 // interfaces
 import { RefreshButtonProps } from './RefreshButton.interface';
 // styles

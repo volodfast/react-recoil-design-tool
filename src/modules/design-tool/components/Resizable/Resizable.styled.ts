@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from '../../../core/constants';
+import { colors } from 'modules/core/constants';
 
 export const Handle = styled.span<{ isVisible: boolean }>`
   position: absolute;

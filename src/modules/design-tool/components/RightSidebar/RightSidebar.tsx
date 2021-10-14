@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 // components
-import Properties from '../Properties';
+import Properties from 'modules/design-tool/components/Properties';
 // styles
 import { RightSidebarContainer } from './RightSidebar.styled';
 

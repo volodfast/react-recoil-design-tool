@@ -1,15 +1,18 @@
 import React, { FC } from 'react';
 import { useRecoilState } from 'recoil';
 // components
-import ColorPicker from '../../../core/components/ColorPicker';
-import InputGroup from '../../../core/components/InputGroup';
-import StyleInput from '../StyleInput';
+import ColorPicker from 'modules/core/components/ColorPicker';
+import InputGroup from 'modules/core/components/InputGroup';
+import StyleInput from 'modules/design-tool/components/StyleInput';
 // state
-import { selectedElementState } from '../../design-tool.state';
+import { selectedElementState } from 'modules/design-tool/design-tool.state';
+// interfaces
+import {
+  CommonState,
+  RectangleState,
+} from 'modules/design-tool/design-tool.interfaces';
 // styles
 import { PropertiesContainer, PropertiesTitle } from './Properties.styled';
-// interfaces
-import { CommonState, RectangleState } from '../../design-tool.interfaces';
 
 const Properties: FC = () => {
   const [selectedElement, setSelectedElement] =

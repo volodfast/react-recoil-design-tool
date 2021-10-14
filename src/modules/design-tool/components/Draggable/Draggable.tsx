@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { DraggableCore } from 'react-draggable';
 // state
-import { elementState } from '../../design-tool.state';
+import { elementState } from 'modules/design-tool/design-tool.state';
 // helpers
-import { useDebounce } from '../../../core/helpers';
+import { useDebounce } from 'modules/core/helpers';
 // interfaces
 import { DraggableProps } from './Draggable.interface';
 

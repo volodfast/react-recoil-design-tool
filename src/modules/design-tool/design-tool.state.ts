@@ -1,7 +1,7 @@
 import { atom, atomFamily, selector, selectorFamily } from 'recoil';
 import randomColor from 'random-material-color';
 // helpers
-import { getImageDimensions } from '../core/helpers';
+import { getImageDimensions } from 'modules/core/helpers';
 // interfaces
 import { CommonStyle, ElementState } from './design-tool.interfaces';
 
