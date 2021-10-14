@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, Suspense } from 'react';
 import { useRecoilValue } from 'recoil';
 import hexToRgba from 'hex-to-rgba';
 // components
 import BaseElement from '../BaseElement';
+import ElementFallback from '../ElementFallback';
 import Image from '../Image';
 // state
 import { elementState } from '../../design-tool.state';
@@ -17,7 +18,9 @@ const Element: FC<ElementProps> = ({ id }) => {
 
   return (
     <BaseElement id={id} style={{ backgroundColor }}>
-      <Image id={id} />
+      <Suspense fallback={<ElementFallback />}>
+        <Image id={id} />
+      </Suspense>
     </BaseElement>
   );
 };
