@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, { Suspense, FC } from 'react';
 import { RecoilRoot } from 'recoil';
 // components
+import Loading from '../Loading';
 import DesignToolPage from '../../../../pages/design-tool/design-tool';
 // styles
 import { GlobalStyles } from './App.styled';
@@ -8,8 +9,10 @@ import { GlobalStyles } from './App.styled';
 const App: FC = () => {
   return (
     <RecoilRoot>
-      <DesignToolPage />
-      <GlobalStyles />
+      <Suspense fallback={<Loading />}>
+        <DesignToolPage />
+        <GlobalStyles />
+      </Suspense>
     </RecoilRoot>
   );
 };
