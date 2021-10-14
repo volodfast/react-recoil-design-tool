@@ -1,5 +1,7 @@
 import { atom, atomFamily, selector, selectorFamily } from 'recoil';
 import randomColor from 'random-material-color';
+// helpers
+import { getImageDimensions } from '../core/helpers';
 // interfaces
 import { CommonStyle, ElementState } from './design-tool.interfaces';
 
@@ -55,5 +57,20 @@ export const isSelectedState = selectorFamily({
       const selectedElementId = get(selectedElementIdState);
 
       return selectedElementId === id;
+    },
+});
+
+export const imageDimensionsState = selectorFamily({
+  key: 'imageDimensions',
+  get:
+    (id: number) =>
+    ({ get }) => {
+      const element = get(elementState(id));
+
+      if (element.type !== 'image') {
+        return null;
+      }
+
+      return getImageDimensions(element.src);
     },
 });
