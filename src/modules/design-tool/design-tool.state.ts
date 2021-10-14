@@ -60,8 +60,8 @@ export const isSelectedState = selectorFamily({
     },
 });
 
-export const imageDimensionsState = selectorFamily({
-  key: 'imageDimensions',
+export const imageSrcState = selectorFamily({
+  key: 'imageSrc',
   get:
     (id: number) =>
     ({ get }) => {
@@ -71,6 +71,21 @@ export const imageDimensionsState = selectorFamily({
         return null;
       }
 
-      return getImageDimensions(element.src);
+      return element.src;
+    },
+});
+
+export const imageDimensionsState = selectorFamily({
+  key: 'imageDimensions',
+  get:
+    (id: number) =>
+    ({ get }) => {
+      const src = get(imageSrcState(id));
+
+      if (!src) {
+        return null;
+      }
+
+      return getImageDimensions(src);
     },
 });
