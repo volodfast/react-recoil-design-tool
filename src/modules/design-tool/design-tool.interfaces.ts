@@ -17,6 +17,7 @@ export type RectangleState = {
 export type ImageState = {
   type: 'image';
   src: string;
+  seed: number;
 };
 
 export type ElementState = CommonState & (RectangleState | ImageState);
