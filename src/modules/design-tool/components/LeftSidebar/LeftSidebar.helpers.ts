@@ -34,6 +34,7 @@ export const useInsertElement = () => {
             type: 'image',
             style: defaultStyle,
             src: randomImage.src,
+            seed: randomImage.seed,
           });
         }
       };
