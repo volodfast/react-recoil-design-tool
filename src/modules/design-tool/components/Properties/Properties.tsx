@@ -4,11 +4,15 @@ import { useRecoilState } from 'recoil';
 import ColorPicker from 'modules/core/components/ColorPicker';
 import InputGroup from 'modules/core/components/InputGroup';
 import StyleInput from 'modules/design-tool/components/StyleInput';
+import RefreshButton from 'modules/core/components/RefreshButton';
 // state
 import { selectedElementState } from 'modules/design-tool/design-tool.state';
+// helpers
+import { getRandomImageUrl } from 'modules/core/helpers';
 // interfaces
 import {
   CommonState,
+  ImageState,
   RectangleState,
 } from 'modules/design-tool/design-tool.interfaces';
 // styles
@@ -27,6 +31,17 @@ const Properties: FC = () => {
     }
   };
 
+  const handleRefreshClick = () => {
+    if (selectedElement) {
+      const image = getRandomImageUrl();
+
+      setSelectedElement({
+        ...selectedElement,
+        src: image.src,
+      } as CommonState & ImageState);
+    }
+  };
+
   if (!selectedElement) {
     return null;
   }
@@ -40,6 +55,9 @@ const Properties: FC = () => {
             value={selectedElement.color}
             onChange={handleColorChange}
           />
+        )}
+        {selectedElement.type === 'image' && (
+          <RefreshButton onClick={handleRefreshClick} />
         )}
         <StyleInput property="top" />
         <StyleInput property="left" />
