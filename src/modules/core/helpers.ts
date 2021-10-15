@@ -19,8 +19,10 @@ export function useDebounce<TArgs extends unknown[]>(
 }
 
 export function getRandomImageUrl() {
+  const random = Math.round(Math.random() * 1000);
+
   return {
-    src: 'https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif',
+    src: `https://picsum.photos/seed/${random}/400/250`,
   };
 }
 
