@@ -1,7 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, Suspense } from 'react';
 // components
 import Properties from 'modules/design-tool/components/Properties';
-import Details from 'modules/design-tool/components/Details';
+import Details, {
+  DetailsFallback,
+} from 'modules/design-tool/components/Details';
 // styles
 import { RightSidebarContainer } from './RightSidebar.styled';
 
@@ -9,7 +11,9 @@ const RightSidebar: FC = () => {
   return (
     <RightSidebarContainer>
       <Properties />
-      <Details />
+      <Suspense fallback={<DetailsFallback />}>
+        <Details />
+      </Suspense>
     </RightSidebarContainer>
   );
 };

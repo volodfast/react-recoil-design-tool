@@ -14,6 +14,10 @@ export const DetailLabel = styled.div`
 `;
 
 export const DetailContent = styled.div`
+  word-break: break-word;
+`;
+
+export const DetailSkeleton = styled.div`
   height: 18px;
   border-radius: 9px;
   position: relative;
