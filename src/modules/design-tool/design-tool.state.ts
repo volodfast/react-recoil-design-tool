@@ -90,8 +90,8 @@ export const imageDimensionsState = selectorFamily({
     },
 });
 
-export const imageDetailsState = selector({
-  key: 'imageDetails',
+const imageSeedState = selector({
+  key: 'imageSeed',
   get: ({ get }) => {
     const selectedElement = get(selectedElementState);
 
@@ -99,6 +99,19 @@ export const imageDetailsState = selector({
       return null;
     }
 
-    return getImageInfo(selectedElement.seed);
+    return selectedElement.seed;
+  },
+});
+
+export const imageDetailsState = selector({
+  key: 'imageDetails',
+  get: ({ get }) => {
+    const selectedElementSeed = get(imageSeedState);
+
+    if (!selectedElementSeed) {
+      return null;
+    }
+
+    return getImageInfo(selectedElementSeed);
   },
 });

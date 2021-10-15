@@ -11,12 +11,16 @@ import { DetailsContainer, DetailsTitle } from './Details.styled';
 const Details: FC = () => {
   const imageDetails = useRecoilValue(imageDetailsState);
 
+  if (!imageDetails) {
+    return null;
+  }
+
   return (
     <DetailsContainer>
       <DetailsTitle>Details</DetailsTitle>
       <InputGroup>
-        <Detail label="Author" value={imageDetails?.author || ''} />
-        <Detail label="Original Image" value={imageDetails?.url || ''} />
+        <Detail label="Author" value={imageDetails.author} />
+        <Detail label="Original Image" value={imageDetails.url} />
       </InputGroup>
     </DetailsContainer>
   );
